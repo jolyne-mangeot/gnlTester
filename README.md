@@ -3,6 +3,19 @@ Tester for the get next line project of 42 school (with personalized leaks check
 Clone this tester in your get_next_line repository. (works on linux and mac, handles sigsegv on all tests, and timeout on mandatory part)  
 ![alt text](https://i.imgur.com/uupv1UH.png)
 
+# NEW FEATURE!
+Now gnl tester support the job flag of Makefile for faster build *in parallel* (instead of building everything sequentially).
+to use it you just have to do the following command in your terminal :
+
+On linux terminal:
+
+```sh
+  make -j$(nproc) m
+```
+On mac terminal:
+```sh
+   make -j$(sysctl -n hw.ncpu) m
+```
 
 # Commands
 make m = launch mandatory tests  
